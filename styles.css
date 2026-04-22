@@ -1,11 +1,11 @@
 @font-face {
   font-family: "Cinzel";
-  src: url("./fonts/Cinzel-VariableFont_wght.ttf") format("truetype");
+  src: url("./Fonts/Cinzel-VariableFont_wght.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Quattrocento";
-  src: url("./fonts/Quattrocento-Regular.ttf") format("truetype");
+  src: url("./Fonts/Quattrocento-Regular.ttf") format("truetype");
 }
 
 :root {
