@@ -4,96 +4,153 @@
     <!--Add more metadata-->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aura Restaurant</title>
-    <!-- icons-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer" 
-    />
-
+    <title>Knight Temple Food</title>
+    
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="./assets/logo-favicon.png" type="image/x-icon">
+    
   </head>
   <body>
-    <header>
+    <header id="bar">
       <!-- Icon in header-->
-      <img src="" alt="Icon" />
+      <img src="/assets/KnightTempleFoodLogo.png" alt="Icon" />
       <nav>
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">Menu</a></li>
           <li><a href="#">About us</a></li>
           <li><a href="#">Location</a></li>
-          <li><a href="">Book Now</a></li> <!--Brown button, see if this goes to other page or a form-->
+          <li><a href="">Book Now</a></li>
+          <!--Brown button, see if this goes to other page or a form-->
         </ul>
       </nav>
     </header>
     <main>
       <section id="hero">
-        <h1></h1>
-        <p>Unforgotten gastronimical expleriencie in the heart of the city</p>
+        <h1>Taste the passion in every plate.</h1>
+        <p>Unforgotten gastronimical experiencie in the heart of the city</p>
       </section>
       <!--Plates-->
-      <section>
+      <section id="featured-dishes">
         <h2>Featured Dishes</h2>
-        <article class="dishes">
-          <img src="" alt="" />
-          <h3></h3>
-          <p></p>
-          <h4></h4>
+        <article class="dish" id="dishes1">
+          <img src="assets/GrilledBeef.jpeg" alt="" />
+          <h3>Grilled Beef</h3>
+          <p>
+            Prime beef forged over an open flame and seared with the strength of
+            iron. Seasoned with Mediterranean sea salt and aromatic herbs, this
+            robust cut pays homage to the hearty banquets of the Order. A meal
+            of honor, crafted to sustain the spirit of the modern crusader.
+          </p>
+          <h4>$45.000</h4>
           <a href=""></a>
         </article>
-        <article class="dishes">
-          <img src="" alt="" />
-          <h3></h3>
-          <p></p>
-          <h4></h4>
+        <article class="dish" id="dishes2 ">
+          <img src="assets/ChickenDish.jpeg" alt="" />
+          <h3>Chicken Dish</h3>
+          <p>
+            Tender poultry marinated in the sun-drenched lemons of Cyprus and
+            infused with the secret spices of the Levant. Slowly roasted over
+            embers to achieve a golden, armor-like crisp, this dish celebrates
+            the flavors discovered by the Order across the distant shores of the
+            Mediterranean.
+          </p>
+          <h4>$65.150</h4>
           <a href=""></a>
         </article>
-        <article class="dishes">
-          <img src="" alt="" />
-          <h3></h3>
-          <p></p>
-          <h4></h4>
+        <article class="dish" id="dishes3">
+          <img src="assets/PorkRibs.jpeg" alt="" />
+          <h3>Pork Ribs</h3>
+          <p>
+            Slow-smoked pork ribs, glazed in a rich reduction of wild honey and
+            forest herbs. Fall-off-the-bone tenderness forged through hours of
+            patient heat, inspired by the grand feasts held within the Order’s
+            mountain strongholds. A bold and rustic bounty for those who have
+            conquered the day's journey.
+          </p>
+          <h4>$40.000</h4>
           <a href=""></a>
         </article>
       </section>
       <!--About us-->
-      <section>
-        <h2>About us</h2>
-        <img src="" alt="">
-        <h3></h3>
-        <p></p>
-        <a href=""></a>
-      </section>
+      
+      <article class="about-card">
+        <section>
+          <h2>About us</h2>
+
+          <p>
+            The Knights Templar were more than just warriors; they were masters of
+            logistics, agriculture, and cross-cultural trade. At
+            <strong>Knight Temple Food</strong>, we draw inspiration from their
+            journey across the Mediterranean, blending the rustic flavors of
+            France with the exotic spices of the Levant.
+          </p>
+          <a href="" target="_blank">see more</a>
+        </section>
+      
+        <img src="assets/AboutUs-Image.png" alt="about-us-img">
+        
+        
+      </article>
       <!--Find us-->
-      <section>
+      <section id="find-us-section">
         <h2>Find us</h2>
-        <img src="" alt=""> <!--Here would be the map-->
-        <h3>Contacts</h3>
-        <p></p>
-        <h3>Schedule</h3>
-        <p></p>
-        <h3>Booking</h3>
-        <!--Here goes something like a textarea, see if we change it-->
-        <button>Book Now</button>
+        <!--Here would be the map-->
+        <div id="map">
+          <iframe id="map-canvas" class="map_part" width="600"  height="450"  frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%&amp;height=100%&amp;hl=en&amp;q=colombia, Altlántico, barraquilla, carcel modelo&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">Powered by <a href="https://www.googlemapsgenerator.com/">embed google maps</a> and <a href="https://xn--mikroln-jxa.com/">snabblån utan uc</a>
+          </iframe>
+        </div>
+        <div class="find-us-container" id="contact-info">
+          <h3>Contacts</h3>
+          <p>Number: 555-1234</p>
+          <p>Email: info@knighttemplefood.com</p>
+        </div>
+
+        <div class="find-us-container" id="schedule">
+          <h3>Schedule</h3>
+          <p>Monday to Friday: 5:00 pm - 9:00 pm
+            <br>
+            saturday and Sunday: 5:00 pm - 11:00 pm
+          </p>
+        </div>
+
+        <div class="find-us-container" id="booking">
+          <h3>Booking</h3>
+          <!--Here goes something  like a textarea, see if we change it-->
+          <a href="">Book Now</a>
+        </div>
       </section>
     </main>
+    
     <!--Footer-->
     <footer>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Menu</a></li>
-          <li><a href="#">About us</a></li>
-          <li><a href="#">Location</a></li>
-        </ul>
-      </nav>
-      <!--The icon in the middle of the footer-->
-      <img src="" alt="">
-      <!--See if the put the social media icons here-->
-      <p>copyright &copy; 2023 Aura Restaurant. All rights reserved.</p>
+      <div id="footer-links">
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Location</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div id="footer-logo">
+        <!--The icon in the middle of the footer-->
+        <img src="assets/KnightTempleFoodLogo.png" alt="Logo" />
+      </div>
+
+      <div id="footer-socials">
+        <a href="https://www.instagram.com/" target="_blank"
+          ><img src="./assets/instagram.png" alt="Instagram"
+        /></a>
+        <a href="https://www.facebook.com/" target="_blank"
+          ><img src="./assets/facebook.png" alt="facebook"
+        /></a>
+        <a href="https://x.com" target="_blank"
+          ><img src="./assets/twitter.png" alt="twitter"
+        /></a>
+      </div>
     </footer>
   </body>
 </html>

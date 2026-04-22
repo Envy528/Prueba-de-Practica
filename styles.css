@@ -1,6 +1,325 @@
-:root{
-    --primary-color: #C5A059; /* Oro templario */ 
-    --secondary-color: #8E2424; /* Rojo brasa */ 
-    --background-color: #1A1A1A; /* Negro carbon ahumado */ 
-    --text-color: #E5E0D3; /* Blanco Pergamino */ 
+@font-face {
+  font-family: "Cinzel";
+  src: url("./fonts/Cinzel-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Quattrocento";
+  src: url("./fonts/Quattrocento-Regular.ttf") format("truetype");
+}
+
+:root {
+  /*Colores*/
+  --primary-color: #c5a059; /* Oro templario */
+  --secondary-color: #8e2424; /* Rojo brasa */
+  --tertiary-color: #e9dabf; /* Beige pergamino */
+  --background-color: #1a1a1a; /* Negro carbon ahumado */
+  --text-color: #e5e0d3; /* Blanco Pergamino */
+  /*Fuentes*/
+  --title-font: "Cinzel", serif;
+  --body-font: "Quattrocento", serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--body-font);
+}
+
+/* Header  */
+#bar {
+  height: 4rem;
+  width: auto;
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: row;
+  place-items: center;
+  justify-content: space-around;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+#bar img {
+  height: 100%;
+  padding: 2px 0;
+}
+
+#bar ul {
+  background-color: var(--secondary-color);
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+#bar ul li a {
+  padding: 8px 0;
+  transition: all 0.3s;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+#bar ul li a:hover {
+  font-size: 18px;
+  background-color: #0000006c;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+/*Hero section*/
+#hero {
+  /*Background*/
+  background-image: url("assets/TheKnight'sFest-HeroImage.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 70vh;
+  /*Contents*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#hero :is(h1, p) {
+  margin-left: 10%;
+  /* -webkit-text-stroke: 1px var(--primary-color); */
+}
+
+#hero h1 {
+  font-family: var(--title-font);
+  font-size: xxx-large;
+  max-width: 15ch;
+  line-height: 1;
+}
+#hero p {
+  font-size: larger;
+  font-weight: bold;
+  max-width: 30ch;
+  margin-top: 1rem;
+}
+
+/* Dishes section */
+#featured-dishes {
+  display: grid;
+  grid-template-areas:
+    "title title title"
+    "dishes1 dishes2 dishes3";
+  justify-content: center;
+  gap: 1rem;
+}
+
+#featured-dishes h2 {
+  grid-area: title;
+  text-align: center;
+  padding-top: 1rem;
+  
+}
+
+#dishes1 {
+  grid-area: dishes1;
+}
+#dishes2 {
+  grid-area: dishes2;
+}
+#dishes3 {
+  grid-area: dishes3;
+}
+
+.dish {
+  background-color: var(--secondary-color);
+  width: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: 1.5s ease;
+}
+.dish:hover {
+  transform: scale(1.05);
+}
+
+.dish :is(h3, p, h4) {
+  margin: 10px;
+}
+
+.dish img {
+  height: 20vh;
+  width: 100%;
+}
+.dish p {
+  max-width: 30ch;
+}
+
+/* ============================================= */
+/* Estilo general del contenedor */
+.about-card {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--body-font);
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 60px;
+  border: 1px solid var(--primary-color);
+  position: relative;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  gap:2rem;
+}
+
+/* Detalle de las esquinas en Oro */
+.about-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 3px double var(--primary-color);
+  margin: 15px;
+  pointer-events: none;
+}
+
+h2 {
+  font-family: var(--title-font);
+  color: var(--primary-color);
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Párrafo introductorio */
+.about-card > p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  text-align: left;
+  max-width: 80%;
+  margin: 0 auto 50px;
+  color: var(--tertiary-color);
+}
+
+.about-card img{
+  max-width: 100%;
+  width: 70%;  
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+}
+
+
+/*-------------------------------------------*/
+/* Find us section*/
+#find-us-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+#find-us-section h2 {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  text-align: center;
+}
+
+.find-us-container {
+  margin-left: 10%;
+}
+
+#map {
+  grid-column: 1 / 2;
+  grid-row: 2 / -1;
+  justify-self: center;
+  margin-bottom: 2rem;
+  border: 5px groove var(--primary-color);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#map iframe {
+  width: 100%;
+  height: 100%;
+}
+
+#booking {
+  display: flex;
+  flex-direction: column;
+}
+
+#booking a {
+  /*Color and font*/
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  font-family: var(--title-font);
+  font-size: larger;
+  text-decoration: none;
+  /*Box*/
+  width: fit-content;  
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+}
+
+/* Footer*/
+footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  background-color: var(--secondary-color);
+  border-top: 2px solid var(--primary-color);
+}
+
+/*Footer Links*/
+#footer-links a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+/*May change**/
+#footer-links a:hover {
+  color: var(--primary-color);
+}
+
+#footer-links ul {
+  margin: 1rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Footer logo*/
+#footer-logo {
+  display: flex;
+  justify-content: center;
+}
+
+#footer-logo img {
+  width: 50%;
+  margin: 1rem;
+}
+
+/* Footer socials*/
+#footer-socials {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+#footer-socials a {
+  width: 2rem;
+}
+
+#footer-socials img {
+  width: 100%;
 }
